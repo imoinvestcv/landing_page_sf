@@ -83,4 +83,4 @@ O formulário faz POST para `/api/send`, que envia o email via
 ## Contactos no site
 
 - Email: info@imoinvest.cv
-- Telefone / WhatsApp: +238 921 78 38 (FAB liga a `wa.link/uml5bo`)
+- Telefone / WhatsApp: +238 921 78 38 (FAB liga a `wa.link/201zsc`)
