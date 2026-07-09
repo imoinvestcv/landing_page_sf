@@ -1,0 +1,18 @@
+# Segredos — NUNCA fazer commit
+.env
+.env.*
+!.env.example
+
+# SO
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Dependências (se vier a usar tooling)
+node_modules/
+
+# Vercel
+.vercel/

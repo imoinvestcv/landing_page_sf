@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMO INVEST · Investimento Imobiliário · Cabo Verde</title>
+<meta name="description" content="IMO INVEST — proprietária e consultora imobiliária em Cabo Verde. Venda de terrenos, loteamento, arquitetura, licenciamento e fiscalização de obra. Do terreno à entrega.">
+<meta name="author" content="IMO INVEST">
+<meta name="theme-color" content="#082630">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IMO INVEST">
+<meta property="og:title" content="IMO INVEST · Investimento Imobiliário · Cabo Verde">
+<meta property="og:description" content="Proprietária e consultora imobiliária em Cabo Verde. Do terreno à entrega da obra.">
+<meta property="og:locale" content="pt_CV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IMO INVEST · Investimento Imobiliário · Cabo Verde">
+<meta name="twitter:description" content="Proprietária e consultora imobiliária em Cabo Verde. Do terreno à entrega da obra.">
+<!-- Após o deploy, substituir pelos URLs absolutos do domínio final (ex.: https://www.imo-invest.cv/images/hero.jpeg) -->
+<meta property="og:image" content="/images/hero.jpeg">
+<meta name="twitter:image" content="/images/hero.jpeg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23082630'/%3E%3Ctext x='16' y='21' font-family='Georgia,serif' font-size='13' fill='%232698ca' text-anchor='middle'%3EII%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff;
+  --mist:#f3f7f8;
+  --mist-2:#e9f0f2;
+  --ink:#0c2630;
+  --slate:#566970;
+  --line:#dfe9eb;
+  --blue:#2698ca;
+  --blue-deep:#1c7aa4;
+  --deep:#082630;
+  --deep-2:#051a22;
+  --maxw:1280px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.04;letter-spacing:-0.01em}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
+
+/* acessibilidade: skip-link + foco visível por teclado */
+.skip-link{position:fixed;left:12px;top:-72px;z-index:1000;background:var(--blue);color:#fff;padding:13px 22px;font-size:.82rem;font-weight:500;letter-spacing:.06em;box-shadow:0 8px 24px -10px rgba(8,38,48,.6);transition:top .28s cubic-bezier(.2,.7,.2,1)}
+.skip-link:focus{top:12px;outline:2px solid #fff;outline-offset:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+.hero :focus-visible,.feat :focus-visible,.band :focus-visible,.contact :focus-visible,.footer :focus-visible,.hdr:not(.scrolled) .nav :focus-visible{outline-color:#8ad3f2}
+.contact__l .det a.v{transition:color .3s}
+.contact__l .det a.v:hover{color:#8ad3f2}
+
+/* eyebrow w/ diagonal slash (logo motif) */
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:.72rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--blue-deep)}
+.eyebrow::before{content:"";width:32px;height:1.5px;background:var(--blue);transform:skewX(-26deg)}
+.eyebrow.on-dark{color:#8ad3f2}.eyebrow.on-dark::before{background:var(--blue)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:11px;font-family:'Jost',sans-serif;font-size:.8rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;padding:16px 30px;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:all .35s cubic-bezier(.2,.7,.2,1)}
+.btn .arr{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn--blue{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn--blue:hover{background:var(--blue-deep);border-color:var(--blue-deep)}
+.btn--ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn--ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn--line{border:none;border-bottom:1px solid var(--ink);padding:8px 0;letter-spacing:.14em}
+.btn--line:hover{color:var(--blue);border-color:var(--blue)}
+
+/* header */
+.scroll-prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--blue);z-index:120;transition:width .12s linear;pointer-events:none}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 36px;transition:background .45s cubic-bezier(.2,.7,.2,1),padding .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.hdr.scrolled{background:rgba(255,255,255,.96);backdrop-filter:saturate(140%) blur(12px);-webkit-backdrop-filter:saturate(140%) blur(12px);padding:13px 36px;box-shadow:0 6px 24px -16px rgba(8,38,48,.4)}
+.hdr.hide{transform:translateY(-101%)}
+.hdr.menu-open{transform:none!important;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;height:46px;position:relative}
+.brand img{height:100%;width:auto;transition:opacity .4s}
+.brand .lt{opacity:0;position:absolute;left:0;top:0}
+.hdr.scrolled .brand .ld,.hdr.menu-open .brand .ld{opacity:0}
+.hdr.scrolled .brand .lt,.hdr.menu-open .brand .lt{opacity:1}
+.nav{display:flex;align-items:center;gap:36px}
+.nav a{font-size:.82rem;font-weight:400;letter-spacing:.07em;color:#fff;opacity:.92;transition:color .3s,opacity .3s;white-space:nowrap}
+.nav a:hover{opacity:1}
+.hdr.scrolled .nav a{color:var(--ink)}
+.hdr.scrolled .nav a:hover{color:var(--blue)}
+.nav .lang{font-size:.74rem;letter-spacing:.14em;opacity:.9;padding-left:12px;margin-left:4px;border-left:1px solid rgba(255,255,255,.3);display:inline-flex;align-items:center;gap:2px}
+.nav .lang__opt{background:none;border:none;cursor:pointer;font-family:inherit;font-size:.74rem;letter-spacing:.12em;color:#fff;opacity:.55;padding:3px 5px;transition:opacity .25s;line-height:1}
+.nav .lang__opt.is-active{opacity:1;font-weight:600}
+.nav .lang__opt:hover{opacity:1}
+.hdr.scrolled .nav .lang__opt{color:var(--ink)}
+.hdr.scrolled .nav .lang{border-color:var(--line)}
+.nav .nav-cta{border:1px solid rgba(255,255,255,.55);padding:10px 20px;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;font-weight:500;transition:all .3s}
+.nav .nav-cta:hover{background:#fff;color:var(--ink)!important;opacity:1}
+.hdr.scrolled .nav .nav-cta{border-color:var(--ink)}
+.hdr.scrolled .nav .nav-cta:hover{background:var(--blue);border-color:var(--blue);color:#fff!important}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:210;position:relative}
+.burger span{width:26px;height:1.5px;background:#fff;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .25s,background .35s;transform-origin:center;display:block}
+.hdr.scrolled .burger span{background:var(--ink)}
+.hdr.menu-open .burger span{background:var(--ink)}
+.hdr.menu-open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hdr.menu-open .burger span:nth-child(2){opacity:0}
+.hdr.menu-open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* media helper */
+.media{position:relative;overflow:hidden}
+.media .ph{position:absolute;inset:0;background:linear-gradient(150deg,#0e3a4a 0%,#0a2a36 55%,#06202a 100%)}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.imgslot{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+.gal__item .imgslot{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.gal__item:hover .imgslot{transform:scale(1.07)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero .ph{position:absolute;inset:0;background:linear-gradient(150deg,#10455a,#0a2c39 60%,#06212b)}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 20s ease-out forwards}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero__veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,18,24,.5) 0%,rgba(5,18,24,.1) 32%,rgba(5,18,24,.62) 100%)}
+.hero__inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 36px 0 clamp(36px,7vw,120px);display:flex;flex-direction:column;align-items:flex-start;gap:36px;text-align:left}
+.hero__text{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.hero h1{display:inline-block;font-size:clamp(2.2rem,5.4vw,4.6rem);font-weight:300;max-width:18ch;white-space:normal;margin:0;padding:0;background:none;border:none}
+.hero h1 em{font-style:italic;color:#bfe6f7}
+.hero__sub{max-width:44ch;margin:0;font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.9);line-height:1.7}
+.hero__cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:flex-start}
+.hero__meta{position:absolute;top:0;left:0;right:0;z-index:2;height:100%;pointer-events:none}
+.hero__scroll{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);z-index:2;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.62);display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero__scroll i{width:1px;height:44px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:drop 2.4s ease-in-out infinite}
+@keyframes drop{0%,100%{transform:scaleY(.4);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* sections */
+.section{padding:clamp(82px,11vw,150px) 0}
+.section.mist{background:var(--mist)}
+.lede{font-size:clamp(1.7rem,3.6vw,2.95rem);font-weight:400;line-height:1.16;letter-spacing:-.01em}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:60px}
+.shead h2{font-size:clamp(2.3rem,5vw,3.8rem);font-weight:400;margin-top:16px}
+.shead p{max-width:40ch;color:var(--slate);font-size:1rem;font-weight:300}
+
+/* intro */
+.intro__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:84px;align-items:center}
+.intro__txt .eyebrow{margin-bottom:26px}
+.intro__txt .lede{margin-bottom:30px;max-width:17ch}
+.intro__txt p{color:var(--slate);font-weight:300;font-size:1.05rem;max-width:48ch;margin-bottom:22px}
+.intro__media{aspect-ratio:4/5}
+.intro__wrapimg{position:relative}
+.intro__badge{position:absolute;left:0;bottom:0;background:var(--paper);padding:24px 32px 20px;max-width:66%}
+.intro__badge .n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--blue-deep);line-height:1}
+.intro__badge .l{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:7px}
+
+/* galeria território */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:8px}
+.gal__item{position:relative;overflow:hidden;cursor:pointer}
+.gal__item .ph{position:absolute;inset:0;background:linear-gradient(150deg,#0e3a4a,#072530)}
+.gal__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.gal__item:hover img{transform:scale(1.07)}
+.gal__item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(5,20,26,.72) 100%);transition:opacity .4s}
+.gal__cap{position:absolute;left:26px;bottom:24px;z-index:2;color:#fff}
+.gal__cap .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;line-height:1.1}
+.gal__cap .s{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);margin-top:5px}
+.g-a{grid-column:span 7;height:440px}
+.g-b{grid-column:span 5;height:440px}
+.g-c{grid-column:span 5;height:420px}
+.g-d{grid-column:span 7;height:420px}
+/* full image visible in grid */
+.gal__item{background:linear-gradient(150deg,#0e3a4a,#072530)}
+.gal__item .imgslot{position:absolute;inset:0}
+.gal__item::after{background:linear-gradient(180deg,transparent 55%,rgba(5,20,26,.78) 100%)}
+.gal__zoom{position:absolute;top:16px;right:16px;z-index:3;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(8,38,48,.42);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.32);color:#fff;opacity:0;transform:scale(.9);transition:opacity .35s,transform .35s,background .3s;pointer-events:none}
+.gal__item:hover .gal__zoom{opacity:1;transform:scale(1)}
+.gal__zoom svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round}
+
+/* lightbox / carrossel */
+.lb{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:rgba(4,16,21,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:opacity .4s cubic-bezier(.2,.7,.2,1),visibility .4s}
+.lb.open{opacity:1;visibility:visible}
+.lb__stage{position:relative;width:min(92vw,1400px);height:82vh;display:flex;align-items:center;justify-content:center}
+.lb__fig{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:0;transform:scale(.985);transition:opacity .45s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.lb__fig.show{opacity:1;transform:none}
+.lb__img{max-width:100%;max-height:calc(82vh - 70px);object-fit:contain;box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
+.lb__cap{text-align:center;color:#fff}
+.lb__cap .t{font-family:'Cormorant Garamond',serif;font-size:1.7rem;line-height:1.1}
+.lb__cap .s{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#8ad3f2;margin-top:7px}
+.lb__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;cursor:pointer;transition:background .3s,border-color .3s,transform .3s}
+.lb__nav:hover{background:#fff;color:var(--ink);border-color:#fff}
+.lb__nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.lb__prev{left:max(18px,2vw)}.lb__next{right:max(18px,2vw)}
+.lb__close{position:absolute;top:26px;right:30px;z-index:3;width:46px;height:46px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;cursor:pointer;transition:background .3s,transform .3s}
+.lb__close:hover{background:#fff;color:var(--ink);transform:rotate(90deg)}
+.lb__close svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.lb__count{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;font-size:.72rem;letter-spacing:.22em;color:rgba(255,255,255,.62)}
+.lb__count b{color:#fff;font-weight:500}
+@media(max-width:680px){
+  .lb__stage{width:94vw;height:78vh}
+  .lb__nav{width:46px;height:46px}.lb__prev{left:8px}.lb__next{right:8px}
+  .lb__close{top:16px;right:16px}
+  .lb__cap .t{font-size:1.4rem}
+  .gal__zoom{opacity:1;transform:scale(1)}
+}
+
+/* serviços */
+.svc{border-top:1px solid var(--line)}
+.svc__row{display:grid;grid-template-columns:repeat(3,1fr)}
+.svc__item{padding:46px 40px 50px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);position:relative;transition:background .4s}
+.svc__row .svc__item:nth-child(3n){border-right:none}
+.svc__item:hover{background:var(--mist)}
+.section.mist .svc,.section.mist .svc__item{border-color:#d4e2e5}
+.section.mist .svc__item:hover{background:#fff}
+.svc__ico{width:40px;height:40px;margin-bottom:24px}
+.svc__ico svg{width:100%;height:100%;stroke:var(--blue);stroke-width:1.2;fill:none}
+.svc__item h3{font-size:1.7rem;margin-bottom:11px}
+.svc__item p{color:var(--slate);font-weight:300;font-size:.96rem;max-width:34ch}
+
+/* achada coroa feature */
+.feat{position:relative;min-height:94vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.feat .ph{position:absolute;inset:0;background:linear-gradient(120deg,#082530,#0e455a 55%,#061d26)}
+.feat__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat__veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,16,21,.84) 0%,rgba(5,16,21,.5) 48%,rgba(5,16,21,.12) 100%)}
+.feat__inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 36px;width:100%}
+.feat__box{max-width:600px}
+.feat__box .eyebrow{margin-bottom:22px}
+.feat h2{font-size:clamp(3rem,6.5vw,5.4rem);font-weight:300;margin-bottom:8px}
+.feat__loc{font-size:.84rem;letter-spacing:.18em;text-transform:uppercase;color:#9fd9f1;margin-bottom:26px}
+.feat__box p{font-size:1.08rem;font-weight:300;color:rgba(255,255,255,.92);line-height:1.75;margin-bottom:36px;max-width:50ch}
+.feat__stats{display:flex;gap:48px;margin-bottom:40px;flex-wrap:wrap;align-items:flex-start}
+.feat__stats .st .v{font-family:'Cormorant Garamond',serif;font-size:2.9rem;line-height:1.04;font-weight:500;white-space:nowrap}
+.feat__stats .st .v em{font-style:normal;color:var(--blue);font-size:1.3rem}
+.feat__stats .st .k{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:8px}
+
+/* quote band (parallax) */
+.band{position:relative;min-height:62vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.band .ph{position:absolute;inset:0;background:linear-gradient(135deg,#0e3a4a,#072530)}
+.band__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band__veil{position:absolute;inset:0;background:rgba(5,20,26,.62)}
+.band__in{position:relative;z-index:2;max-width:880px;padding:0 36px}
+.band__in .q{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.25;font-style:italic}
+.band__in .a{margin-top:24px;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:#9fd9f1}
+
+/* processo */
+.proc__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.proc__step{padding:44px 30px 38px;border-right:1px solid var(--line)}
+.proc__grid .proc__step:last-child{border-right:none}
+.proc__step .num{font-family:'Cormorant Garamond',serif;font-size:3.3rem;color:var(--blue);line-height:1;font-weight:500}
+.proc__step .num::after{content:"";display:block;width:30px;height:1.5px;background:var(--blue);transform:skewX(-26deg);margin:16px 0 20px}
+.proc__step h3{font-size:1.5rem;margin-bottom:11px}
+.proc__step p{color:var(--slate);font-weight:300;font-size:.94rem}
+
+/* parceiros */
+.partners{background:var(--mist-2);padding:62px 0}
+.partners__in{display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap}
+.partners__in .t{max-width:52ch}
+.partners__in .t .eyebrow{margin-bottom:14px}
+.partners__in .t p{font-family:'Cormorant Garamond',serif;font-size:1.7rem;line-height:1.34;color:var(--ink)}
+
+/* contacto */
+.contact{position:relative;background:var(--deep);color:#fff;overflow:hidden}
+.contact__bg{position:absolute;inset:0;opacity:.18}
+.contact__bg img{width:100%;height:100%;object-fit:cover}
+.contact__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--deep) 30%,transparent)}
+.contact__grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:clamp(82px,11vw,140px) 0}
+.contact__l .eyebrow{margin-bottom:26px}
+.contact__l h2{font-size:clamp(2.4rem,5vw,4rem);font-weight:300;margin-bottom:32px;max-width:13ch}
+.contact__l .det{margin-top:38px;display:grid;gap:22px}
+.contact__l .det .k{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#7fc4e0;margin-bottom:6px}
+.contact__l .det .v{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.92)}
+.form{display:grid;gap:22px}
+.field label{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:9px}
+.field input,.field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.22);color:#fff;font-family:'Jost',sans-serif;font-size:1rem;font-weight:300;padding:10px 0;transition:border-color .3s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--blue)}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}
+.field textarea{resize:vertical;min-height:84px}
+.form .btn{justify-self:start;margin-top:6px}
+.form .note{font-size:.8rem;color:rgba(255,255,255,.62);font-weight:300}
+
+/* footer */
+.footer{background:var(--deep-2);color:rgba(255,255,255,.74);padding:68px 0 34px}
+.footer__top{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer__brand img{height:60px;width:auto;margin-bottom:18px}
+.footer__brand p{max-width:34ch;font-size:.92rem;font-weight:300;line-height:1.7}
+.footer__nav{display:flex;gap:66px;flex-wrap:wrap}
+.footer__nav .col h4{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:17px;font-family:'Jost',sans-serif;font-weight:500}
+.footer__nav .col a{display:block;font-size:.92rem;font-weight:300;margin-bottom:11px;transition:color .3s}
+.footer__nav .col a:hover{color:var(--blue)}
+.footer__bot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:26px;font-size:.8rem;font-weight:300;color:rgba(255,255,255,.58)}
+
+/* reveal */
+.reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:no-preference){
+  .js-anim .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .js-anim .reveal.in{opacity:1;transform:none}
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* — Notebook / portátil (≤1200px) — */
+@media(max-width:1200px){
+  :root{--maxw:1080px}
+  .intro__grid{gap:60px}
+  .gal{gap:14px}
+  .g-a,.g-b{height:400px}.g-c,.g-d{height:380px}
+  .svc__item{padding:42px 32px 46px}
+  .contact__grid{gap:60px}
+  .feat__stats{gap:40px}
+}
+
+/* — Tablet (≤980px) — */
+@media(max-width:980px){
+  .hdr{padding:20px 36px}.hdr.scrolled{padding:12px 36px}
+  .intro__grid{grid-template-columns:1fr;gap:46px}
+  .intro__media{aspect-ratio:16/10;order:-1}
+  .intro__badge{padding:20px 26px 18px}
+  /* galeria → 2 colunas */
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .g-a,.g-b,.g-c,.g-d{grid-column:span 1;height:320px}
+  /* serviços → 2 colunas */
+  .svc__row{grid-template-columns:repeat(2,1fr)}
+  .svc__row .svc__item:nth-child(3n){border-right:1px solid var(--line)}
+  .svc__row .svc__item:nth-child(2n){border-right:none}
+  .section.mist .svc__row .svc__item:nth-child(3n){border-right:1px solid #d4e2e5}
+  .section.mist .svc__row .svc__item:nth-child(2n){border-right:none}
+  /* processo → 2 colunas */
+  .proc__grid{grid-template-columns:repeat(2,1fr)}
+  .proc__step{border-bottom:1px solid var(--line)}
+  .proc__grid .proc__step:nth-child(2n){border-right:none}
+  .contact__grid{grid-template-columns:1fr;gap:48px}
+  .shead{margin-bottom:48px}
+  .partners__in{gap:30px}
+  .feat{min-height:auto;padding:clamp(110px,16vw,150px) 0}
+  /* nav vira menu-drawer + burger a partir do tablet (nav horizontal precisa ~800px; troca aqui p/ nunca cortar nem colar no logo) */
+  .hdr.menu-open{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  .nav{display:flex;position:fixed;inset:0;background:#ffffff;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:0;z-index:90;transform:translateY(-100%);opacity:0;visibility:hidden;transition:transform .55s cubic-bezier(.2,.7,.2,1),opacity .4s ease,visibility .55s}
+  .hdr.menu-open .nav{transform:none;opacity:1;visibility:visible}
+  .nav a{color:var(--ink);font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;letter-spacing:0;text-transform:none;opacity:.95;padding:9px 0;transform:translateY(16px);transition:transform .5s cubic-bezier(.2,.7,.2,1),color .3s,opacity .4s}
+  .hdr.menu-open .nav a{transform:none}
+  .hdr.menu-open .nav a:nth-child(1){transition-delay:.10s}
+  .hdr.menu-open .nav a:nth-child(2){transition-delay:.16s}
+  .hdr.menu-open .nav a:nth-child(3){transition-delay:.22s}
+  .hdr.menu-open .nav a:nth-child(4){transition-delay:.28s}
+  .hdr.menu-open .nav a:nth-child(5){transition-delay:.34s}
+  .nav a:hover{color:var(--blue)}
+  .nav .nav-cta{margin-top:18px;border:1px solid var(--blue);background:var(--blue);color:#fff!important;font-family:'Jost',sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:.13em;padding:15px 34px;border-radius:0}
+  .nav .nav-cta:hover{background:var(--blue-deep);border-color:var(--blue-deep)}
+  .nav .lang{display:inline-flex;margin-top:26px;padding-left:0;border-left:none;gap:8px}
+  .nav .lang__opt{color:var(--ink);opacity:.5;font-size:.86rem;padding:14px 18px;border:1px solid var(--line)}
+  .nav .lang__opt.is-active{opacity:1;color:var(--blue);border-color:var(--blue)}
+  .burger{display:flex;align-items:center;justify-content:center;min-width:46px;min-height:44px;margin-right:-10px}
+  body.menu-lock{overflow:hidden}
+}
+
+/* — Mobile (≤680px) — */
+@media(max-width:680px){
+  .wrap{padding:0 22px}
+  .hdr{padding:16px 22px}.hdr.scrolled{padding:11px 22px}
+  .brand{height:40px}
+  .hero{min-height:88vh;min-height:88svh}
+  .hero__inner{padding:0 22px;gap:28px;text-align:left;align-items:flex-start}
+  .hero h1{max-width:none}
+  .hero__sub{font-size:1rem;margin:0}
+  .hero__cta{gap:12px;flex-direction:row;flex-wrap:wrap;justify-content:flex-start}
+  .hero__cta .btn{flex:1 1 auto;justify-content:center}
+  .gal{grid-template-columns:1fr;gap:14px}
+  .g-a,.g-b,.g-c,.g-d{height:300px}
+  .svc__row{grid-template-columns:1fr}
+  .svc__row .svc__item{border-right:none!important;padding:38px 26px 40px}
+  .section.mist .svc__row .svc__item{border-right:none!important}
+  .proc__grid{grid-template-columns:1fr}
+  .proc__step{border-right:none!important;padding:34px 24px 30px}
+  .feat__inner{padding:0 22px}
+  .feat__stats{gap:26px 36px}
+  .feat__box p{font-size:1rem}
+  .band__in{padding:0 22px}
+  .contact__grid{padding:clamp(70px,16vw,110px) 0}
+  .contact__l .det a.v{display:inline-block;padding:8px 0;margin:-5px 0}
+  .eyebrow{font-size:.75rem}
+  .field label{font-size:.74rem}
+  .contact__l .det .k{font-size:.74rem}
+  .footer__top{gap:34px}
+  .footer__nav{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 24px}
+  .footer__nav .col h4{font-size:.74rem}
+  .footer__nav .col a{padding:4px 0;margin-bottom:5px}
+  .shead{margin-bottom:38px}
+  .btn{padding:15px 26px}
+}
+
+/* — Mobile pequeno (≤430px) — */
+@media(max-width:430px){
+  .wrap{padding:0 18px}
+  .hero__inner{padding:0 18px}
+  .hero__cta{flex-direction:column;align-items:stretch;align-self:stretch}
+  .hero__cta .btn{width:100%}
+  .intro__badge{max-width:80%}
+  .gal__cap{left:18px;bottom:18px}
+  .gal__cap .t{font-size:1.45rem}
+  .feat__stats{gap:22px 30px}
+  .footer__nav{gap:28px}
+  .footer__bot{flex-direction:column;gap:8px}
+}
+
+/* — Ecrãs baixos (telemóvel/tablet em landscape) — */
+@media(max-width:980px) and (max-height:560px){
+  .hero{min-height:auto;padding:108px 0 64px}
+  .hero__scroll{display:none}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "IMO INVEST",
+  "description": "Proprietária e consultora imobiliária em Cabo Verde. Venda de terrenos, loteamento, arquitetura, licenciamento e fiscalização de obra.",
+  "email": "contacto@imo-invest.cv",
+  "telephone": "+238 921 78 38",
+  "areaServed": "Cabo Verde",
+  "address": {"@type": "PostalAddress", "addressLocality": "Praia", "addressRegion": "Ilha de Santiago", "addressCountry": "CV"}
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#quem-somos" data-i18n="skip">Saltar para o conteúdo</a>
+
+<header class="hdr" id="hdr">
+  <a href="#top" class="brand" aria-label="IMO INVEST">
+    <img class="ld" src="images/logo-light.png" alt="IMO INVEST">
+    <img class="lt" src="images/logo-dark.png" alt="IMO INVEST">
+  </a>
+  <nav class="nav" id="nav" aria-label="Navegação principal">
+    <a href="#quem-somos" data-i18n="nav.about">Quem somos</a>
+    <a href="#territorio" data-i18n="nav.opp">Oportunidades</a>
+    <a href="#servicos" data-i18n="nav.services">Serviços</a>
+    <a href="#achada-coroa" data-i18n="nav.invest">Investir</a>
+    <a href="#contacto" class="nav-cta" data-i18n="nav.contact">Falar connosco</a>
+    <span class="lang" role="group" aria-label="Idioma" data-i18n-aria="aria.lang">
+      <button class="lang__opt is-active" data-lang="pt" aria-pressed="true">PT</button>
+      <button class="lang__opt" data-lang="en" aria-pressed="false">EN</button>
+      <button class="lang__opt" data-lang="fr" aria-pressed="false">FR</button>
+    </span>
+  </nav>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false" aria-haspopup="true"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="ph"></div>
+  <img class="hero__img" id="img-hero" src="images/hero.jpeg" alt="Costa de Cabo Verde ao entardecer" fetchpriority="high">
+  <div class="hero__veil"></div>
+  <div class="hero__inner reveal">
+    <div class="hero__text">
+      <span class="eyebrow on-dark" data-i18n="hero.eyebrow">Cabo Verde · Consultoria Imobiliária</span>
+      <h1 data-i18n="hero.title">A solidez de investir <em style="color: rgb(191, 231, 247)">em terra.</em></h1>
+      <p class="hero__sub" data-i18n="hero.sub">Segurança e confiança em cada etapa do seu investimento. Consultoria premium — do loteamento à entrega da obra.</p>
+    </div>
+    <div class="hero__cta">
+      <a href="#achada-coroa" class="btn btn--ghost" data-i18n="hero.cta1">Ver oportunidades <span class="arr">→</span></a>
+      <a href="#contacto" class="btn btn--blue" data-i18n="hero.cta2">Falar connosco <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="hero__scroll"><span data-i18n="hero.scroll">Explorar</span><i></i></div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section class="section" id="quem-somos">
+  <div class="wrap">
+    <div class="intro__grid">
+      <div class="intro__txt reveal">
+        <span class="eyebrow" data-i18n="about.eyebrow">Quem somos</span>
+        <h2 class="lede" data-i18n="about.lede">Proprietária e consultora. Do terreno à entrega.</h2>
+        <p data-i18n="about.p1">A <span style="color:var(--blue-deep)">IMO INVEST</span> detém grandes parcelas de terreno em Cabo Verde e acompanha cada investimento em todo o ciclo — do loteamento ao licenciamento, da arquitetura à fiscalização de obra.</p>
+        <p data-i18n="about.p2">Um interlocutor único, com rigor institucional, ao serviço de investidores nacionais e internacionais que procuram solidez e transparência.</p>
+        <a href="#servicos" class="btn btn--line" data-i18n="about.cta">Conhecer os serviços</a>
+      </div>
+      <div class="intro__media reveal">
+        <div class="intro__wrapimg media" style="height:100%">
+          <div class="ph"></div>
+          <img class="imgslot" id="img-intro" src="images/intro.webp" alt="Arquitetura contemporânea em Cabo Verde" loading="lazy">
+          <div class="intro__badge"><div class="n" data-i18n="badge.n">Cabo Verde</div><div class="l" data-i18n="badge.l">Ilha de Santiago</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERRITÓRIO / GALERIA -->
+<section class="section mist" id="territorio">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div><span class="eyebrow" data-i18n="opp.eyebrow">OPORTUNIDADES</span><h2 data-i18n="opp.title">Condomínio de São Francisco.</h2></div>
+      <p data-i18n="opp.p">Loteamento em São Francisco, Praia — a apenas 5 minutos do aeroporto e 2 minutos da praia. Uma localização rara, para quem procura tranquilidade, segurança e qualidade de vida à beira-mar.</p>
+    </div>
+    <div class="gal reveal">
+      <div class="gal__item g-a media" data-i18n-aria="gal.zoom"><div class="ph"></div><img class="imgslot" id="img-gal-a" src="images/gal-a.webp" alt="Costa atlântica de São Francisco" loading="lazy"><div class="gal__cap"><div class="t" data-i18n="gal.a.t">Costa atlântica</div><div class="s" data-i18n="gal.a.s">SÃO FRANCISCO</div></div></div>
+      <div class="gal__item g-b media" data-i18n-aria="gal.zoom"><div class="ph"></div><img class="imgslot" id="img-gal-b" src="images/gal-b.webp" alt="Loteamento de 5,5 hectares em São Francisco" loading="lazy"><div class="gal__cap"><div class="t" data-i18n="gal.b.t">Loteamento de 5,5 hectares</div><div class="s" data-i18n="gal.b.s">LOTES DISPONÍVEIS SOB RESERVA</div></div></div>
+      <div class="gal__item g-c media" data-i18n-aria="gal.zoom"><div class="ph"></div><img class="imgslot" id="img-gal-c" src="images/gal-c.webp" alt="Terreno com vista para o mar, a 2 minutos da praia" loading="lazy"><div class="gal__cap"><div class="t" data-i18n="gal.c.t">Terreno com vista para o mar</div><div class="s" data-i18n="gal.c.s">A 2 MINUTOS DA PRAIA</div></div></div>
+      <div class="gal__item g-d media" data-i18n-aria="gal.zoom"><div class="ph"></div><img class="imgslot" id="img-gal-d" src="images/gal-d.webp" alt="Terreno em Cabo Verde — terra que valoriza" loading="lazy"><div class="gal__cap"><div class="t" data-i18n="gal.d.t">Terra que valoriza</div><div class="s" style="color: rgba(255, 255, 255, 0.78)" data-i18n="gal.d.s"><span style="color:#ffffffc7">O INVESTIMENTO QUE NÃO SE DESVALORIZA</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section" id="servicos">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div><span class="eyebrow" data-i18n="svc.eyebrow">O que fazemos</span><h2 data-i18n="svc.title">Serviços</h2></div>
+      <p data-i18n="svc.p">Um acompanhamento completo do investimento imobiliário em Cabo Verde, com a exigência de uma consultoria premium.</p>
+    </div>
+    <div class="svc reveal">
+      <div class="svc__row">
+        <div class="svc__item"><div class="svc__ico"><svg viewBox="0 0 40 40"><path d="M5 35V15l15-9 15 9v20"/><path d="M5 35h30"/><path d="M16 35V24h8v11"/></svg></div><h3 data-i18n="svc1.h">Venda de terrenos</h3><p data-i18n="svc1.p">Parcelas com projetos de loteamento, prontas a investir.</p></div>
+        <div class="svc__item"><div class="svc__ico"><svg viewBox="0 0 40 40"><path d="M7 33h26"/><path d="M11 33V11l9-5 9 5v22"/><path d="M11 17h18M11 23h18"/></svg></div><h3 data-i18n="svc2.h">Projetos de arquitetura</h3><p data-i18n="svc2.p">Conceção e desenho técnico, do conceito ao licenciamento.</p></div>
+        <div class="svc__item"><div class="svc__ico"><svg viewBox="0 0 40 40"><path d="M6 34l8-22 6 16 5-10 9 16z"/><circle cx="14" cy="9" r="2.5"/></svg></div><h3 data-i18n="svc3.h">Terrenos por hectares</h3><p data-i18n="svc3.p">Propriedade de hectares com potencial ilimitado para grandes investimentos.</p></div>
+        <div class="svc__item"><div class="svc__ico"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M20 11v9l6 4"/></svg></div><h3 data-i18n="svc4.h">Fiscalização de obras</h3><p data-i18n="svc4.p">Acompanhamento técnico e controlo de qualidade em cada fase.</p></div>
+        <div class="svc__item"><div class="svc__ico"><svg viewBox="0 0 40 40"><path d="M7 33h26V9H7z"/><path d="M7 16h26"/><path d="M13 23h6M13 28h10"/></svg></div><h3 data-i18n="svc5.h">Gestão e balanço</h3><p data-i18n="svc5.p">Gestão de orçamento e balanço contabilístico completo.</p></div>
+        <div class="svc__item"><div class="svc__ico"><svg viewBox="0 0 40 40"><path d="M6 16l14-8 14 8-14 8z"/><path d="M11 19v9c0 0 4 4 9 4s9-4 9-4v-9"/></svg></div><h3 data-i18n="svc6.h">Parcerias bancárias</h3><p data-i18n="svc6.p">Acesso a financiamento através da nossa rede de bancos parceiros.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHADA COROA -->
+<section class="feat" id="achada-coroa">
+  <div class="ph"></div>
+  <img class="feat__img" id="img-achada" src="images/achada-coroa.webp" alt="Frente de mar de Achada Coroa, Santa Cruz" loading="lazy">
+  <div class="feat__veil"></div>
+  <div class="feat__inner">
+    <div class="feat__box reveal">
+      <span class="eyebrow on-dark" data-i18n="feat.eyebrow">Oportunidade em destaque</span>
+      <h2>Achada Coroa</h2>
+      <div class="feat__loc" data-i18n="feat.loc">Santa Cruz · Ilha de Santiago · Cabo Verde</div>
+      <p data-i18n="feat.p">Sessenta hectares de frente de mar em Santa Cruz — uma das maiores oportunidades de investimento costeiro em Cabo Verde, detida e disponibilizada diretamente pela IMO INVEST, sem intermediários.</p>
+      <div class="feat__stats">
+        <div class="st"><div class="v">60<em> ha</em></div><div class="k" data-i18n="feat.s1k">Área total</div></div>
+        <div class="st"><div class="v" data-i18n="feat.s2v">Vista para o mar</div><div class="k" data-i18n="feat.s2k">FRENTE AO MAR</div></div>
+        <div class="st"><div class="v">Santiago</div><div class="k">Santa Cruz</div></div>
+      </div>
+      <a href="#contacto" class="btn btn--blue" data-i18n="feat.cta">Pedir dossier de investimento <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section class="band">
+  <div class="ph"></div>
+  <img class="band__img" id="img-band" src="images/band.webp" alt="Paisagem costeira de Cabo Verde" loading="lazy">
+  <div class="band__veil"></div>
+  <div class="band__in reveal">
+    <p class="q" data-i18n="band.q">A terra é o investimento que permanece. O nosso papel é torná-la sólida, transparente e rentável.</p>
+    <div class="a" data-i18n="band.a">IMO INVEST · Cabo Verde</div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="section mist" id="processo">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div><span class="eyebrow" data-i18n="proc.eyebrow">Como trabalhamos</span><h2 data-i18n="proc.title">Um processo, do início ao fim.</h2></div>
+      <p data-i18n="proc.p">Quatro etapas que garantem rigor técnico e controlo financeiro em cada investimento.</p>
+    </div>
+    <div class="proc__grid reveal">
+      <div class="proc__step"><div class="num">01</div><h3 data-i18n="proc1.h">Análise</h3><p data-i18n="proc1.p">Avaliamos o terreno, o enquadramento legal e o potencial do investimento.</p></div>
+      <div class="proc__step"><div class="num">02</div><h3 data-i18n="proc2.h">Projeto</h3><p data-i18n="proc2.p">Desenhamos o loteamento e a arquitetura à medida do objetivo.</p></div>
+      <div class="proc__step"><div class="num">03</div><h3 data-i18n="proc3.h">Licenciamento</h3><p data-i18n="proc3.p">Conduzimos o processo junto das entidades competentes.</p></div>
+      <div class="proc__step"><div class="num">04</div><h3 data-i18n="proc4.h">Execução</h3><p data-i18n="proc4.p">Acompanhamos a obra com fiscalização técnica e controlo orçamental.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCEIROS -->
+<section class="partners">
+  <div class="wrap">
+    <div class="partners__in reveal">
+      <div class="t"><span class="eyebrow" data-i18n="part.eyebrow">Parceiros</span><p data-i18n="part.p">Trabalhamos com instituições bancárias parceiras para facilitar o financiamento do seu próximo investimento em Cabo Verde.</p></div>
+      <a href="#contacto" class="btn" data-i18n="part.cta">Falar com a equipa <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="contact__bg"><img class="imgslot" id="img-contact" src="images/contact-bg.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="contact__grid">
+      <div class="contact__l reveal">
+        <span class="eyebrow on-dark" data-i18n="contact.eyebrow">Contacto</span>
+        <h2 data-i18n="contact.title">Falemos do seu próximo investimento.</h2>
+        <div class="det">
+          <div><div class="k" data-i18n="contact.office_k">Escritório</div><div class="v" data-i18n="contact.office_v">Praia, Ilha de Santiago — Cabo Verde</div></div>
+          <div><div class="k" data-i18n="contact.email_k">Email</div><a class="v" href="mailto:contacto@imo-invest.cv">contacto@imo-invest.cv</a></div>
+          <div><div class="k" data-i18n="contact.phone_k">Telefone</div><a class="v" href="tel:+2389217838">+238 921 78 38</a></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="form" id="contactForm" novalidate>
+          <div class="field"><label for="n" data-i18n="form.name">Nome</label><input id="n" name="nome" type="text" autocomplete="name" required placeholder="O seu nome" data-i18n-ph="form.name_ph"></div>
+          <div class="field"><label for="e" data-i18n="form.email">Email</label><input id="e" name="email" type="email" autocomplete="email" required placeholder="O seu email" data-i18n-ph="form.email_ph"></div>
+          <div class="field"><label for="m" data-i18n="form.msg">Mensagem</label><textarea id="m" name="mensagem" required placeholder="Conte-nos sobre o seu projeto ou interesse" data-i18n-ph="form.msg_ph"></textarea></div>
+          <input type="text" name="empresa" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;border:0;padding:0">
+          <button class="btn btn--blue" type="submit" data-i18n="form.send">Enviar mensagem <span class="arr">→</span></button>
+          <p class="note" id="formNote" role="status" aria-live="polite" data-i18n="form.note">Resposta habitual em 24 horas úteis.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/logo-light.png" alt="IMO INVEST">
+        <p data-i18n="footer.tagline">Consultoria imobiliária e investimento em terra. Cabo Verde.</p>
+      </div>
+      <div class="footer__nav">
+        <div class="col"><h4 data-i18n="footer.nav_h">Navegação</h4><a href="#quem-somos" data-i18n="nav.about">Quem somos</a><a href="#territorio" data-i18n="nav.opp">Oportunidades</a><a href="#servicos" data-i18n="nav.services">Serviços</a><a href="#achada-coroa" data-i18n="nav.invest">Investir</a></div>
+        <div class="col"><h4 data-i18n="footer.svc_h">Serviços</h4><a href="#servicos" data-i18n="footer.svc1">Venda de terrenos</a><a href="#servicos" data-i18n="footer.svc2">Arquitetura</a><a href="#servicos" data-i18n="footer.svc3">Fiscalização</a><a href="#servicos" data-i18n="footer.svc4">Parcerias bancárias</a></div>
+        <div class="col"><h4 data-i18n="footer.contact_h">Contacto</h4><a href="#contacto" data-i18n="footer.loc">Praia, Santiago</a><a href="mailto:contacto@imo-invest.cv">contacto@imo-invest.cv</a><a href="tel:+2389217838">+238 921 78 38</a></div>
+      </div>
+    </div>
+    <div class="footer__bot"><span data-i18n="footer.rights">© 2026 IMO INVEST · Investimento Imobiliário. Todos os direitos reservados.</span><span data-i18n="footer.cv">Cabo Verde</span></div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<a class="wa-fab" href="https://wa.link/uml5bo" target="_blank" rel="noopener" aria-label="Falar connosco no WhatsApp" data-i18n-aria="aria.wa">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16.04 3.2c-7.06 0-12.8 5.73-12.8 12.79 0 2.26.59 4.46 1.72 6.4L3.2 28.8l6.57-1.72a12.76 12.76 0 0 0 6.27 1.6h.01c7.05 0 12.79-5.74 12.79-12.8 0-3.42-1.33-6.63-3.75-9.05a12.7 12.7 0 0 0-9.05-3.63zm0 23.4h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-4.9 1.29 1.31-4.78-.25-.4a10.6 10.6 0 0 1-1.62-5.65c0-5.86 4.77-10.63 10.65-10.63 2.84 0 5.51 1.11 7.52 3.12a10.56 10.56 0 0 1 3.11 7.52c0 5.87-4.77 10.64-10.63 10.64zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.78-2.21-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.14 3.08 1.3 3.29.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.46.21 2 .13.61-.09 1.89-.77 2.16-1.52.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37z"/></svg>
+</a>
+<script>
+const hdr=document.getElementById('hdr');
+const burger=document.getElementById('burger');
+const nav=document.querySelector('.nav');
+
+/* === i18n: PT / EN / FR === */
+const I18N=window.I18N||{pt:{}};
+let LANG=(function(){try{const s=localStorage.getItem('imo_lang');return (s&&I18N[s])?s:'pt';}catch(e){return 'pt';}})();
+function t(k){return (I18N[LANG]&&I18N[LANG][k]!=null)?I18N[LANG][k]:((I18N.pt&&I18N.pt[k])||'');}
+function applyLang(lang){
+  if(!I18N[lang])lang='pt';
+  LANG=lang;
+  try{localStorage.setItem('imo_lang',LANG);}catch(e){}
+  document.documentElement.lang=LANG;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=t(el.getAttribute('data-i18n'));if(v==='')return;if(v.indexOf('<')>=0)el.innerHTML=v;else el.textContent=v;});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const v=t(el.getAttribute('data-i18n-ph'));if(v)el.placeholder=v;});
+  document.querySelectorAll('[data-i18n-aria]').forEach(el=>{const v=t(el.getAttribute('data-i18n-aria'));if(v)el.setAttribute('aria-label',v);});
+  document.querySelectorAll('.lang__opt').forEach(b=>{const on=b.dataset.lang===LANG;b.classList.toggle('is-active',on);b.setAttribute('aria-pressed',on?'true':'false');});
+  if(burger){const open=hdr.classList.contains('menu-open');burger.setAttribute('aria-label',open?t('aria.menu_close'):t('aria.menu_open'));}
+}
+
+// scroll-progress bar
+const prog=document.createElement('div');
+prog.className='scroll-prog';
+document.body.appendChild(prog);
+
+// header: scrolled state + auto-hide on scroll down / reveal on scroll up
+let lastY=window.scrollY, ticking=false;
+function onScroll(){
+  const y=window.scrollY;
+  hdr.classList.toggle('scrolled',y>40);
+  // header permanece fixo e visível ao longo de toda a página
+  hdr.classList.remove('hide');
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  prog.style.width=(h>0?(y/h*100):0)+'%';
+  lastY=y;
+  ticking=false;
+}
+window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(onScroll);ticking=true;}},{passive:true});
+onScroll();
+
+// mobile menu
+function setMenu(open){
+  hdr.classList.toggle('menu-open',open);
+  document.body.classList.toggle('menu-lock',open);
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  burger.setAttribute('aria-label',open?t('aria.menu_close'):t('aria.menu_open'));
+  if(open) hdr.classList.remove('hide');
+}
+burger.setAttribute('aria-expanded','false');
+burger.addEventListener('click',()=>setMenu(!hdr.classList.contains('menu-open')));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
+// language switcher
+document.querySelectorAll('.lang__opt').forEach(btn=>{
+  btn.addEventListener('click',()=>applyLang(btn.dataset.lang));
+});
+// close menu if resizing up to desktop
+window.addEventListener('resize',()=>{if(window.innerWidth>980)setMenu(false);},{passive:true});
+
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.documentElement.classList.add('js-anim');
+function revealCheck(){const vh=window.innerHeight||document.documentElement.clientHeight;document.querySelectorAll('.reveal:not(.in)').forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92)el.classList.add('in');});}
+window.addEventListener('scroll',revealCheck,{passive:true});window.addEventListener('resize',revealCheck,{passive:true});window.addEventListener('load',revealCheck);revealCheck();setTimeout(revealCheck,120);
+const contactForm=document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const note=document.getElementById('formNote');
+    if(!contactForm.checkValidity()){contactForm.reportValidity();return;}
+    const btn=contactForm.querySelector('button[type="submit"]');
+    const nome=contactForm.nome.value.trim();
+    const email=contactForm.email.value.trim();
+    const msg=contactForm.mensagem.value.trim();
+    btn.disabled=true;btn.style.opacity='.6';
+    note.textContent=t('form.sending');note.style.color='';
+    try{
+      const r=await fetch('/api/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome:nome,email:email,mensagem:msg,empresa:contactForm.empresa.value,lang:LANG})});
+      if(!r.ok)throw new Error('send failed');
+      note.textContent=t('form.sent').replace('{name}',nome?(', '+nome.split(' ')[0]):'');
+      note.style.color='#8ad3f2';
+      contactForm.reset();
+    }catch(err){
+      note.textContent=t('form.error');
+      note.style.color='#f7b9a4';
+    }finally{
+      btn.disabled=false;btn.style.opacity='';
+    }
+  });
+}
+
+/* === Galeria → carrossel em ecrã inteiro === */
+(function(){
+  const items=[...document.querySelectorAll('#territorio .gal__item')];
+  if(!items.length) return;
+
+  // ícone de ampliar em cada cartão
+  items.forEach(it=>{
+    if(it.querySelector('.gal__zoom')) return;
+    const z=document.createElement('div');
+    z.className='gal__zoom';
+    z.innerHTML='<svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l4.5 4.5M10.5 7.5v6M7.5 10.5h6"/></svg>';
+    it.appendChild(z);
+  });
+
+  // lightbox
+  const lb=document.createElement('div');
+  lb.className='lb';lb.setAttribute('aria-hidden','true');
+  lb.innerHTML=
+    '<button class="lb__close" aria-label="Fechar" data-i18n-aria="lb.close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>'+
+    '<button class="lb__nav lb__prev" aria-label="Anterior" data-i18n-aria="lb.prev"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>'+
+    '<button class="lb__nav lb__next" aria-label="Seguinte" data-i18n-aria="lb.next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>'+
+    '<div class="lb__stage"><figure class="lb__fig"><img class="lb__img" alt=""><figcaption class="lb__cap"><div class="t"></div><div class="s"></div></figcaption></figure></div>'+
+    '<div class="lb__count"><b class="cur">1</b> / <span class="tot">1</span></div>';
+  document.body.appendChild(lb);
+  const fig=lb.querySelector('.lb__fig');
+  const lbImg=lb.querySelector('.lb__img');
+  const capT=lb.querySelector('.lb__cap .t');
+  const capS=lb.querySelector('.lb__cap .s');
+  const cur=lb.querySelector('.cur');
+  lb.querySelector('.tot').textContent=items.length;
+
+  let idx=0,open=false;
+  const urlOf=it=>{const im=it.querySelector('img.imgslot');return (im&&(im.currentSrc||im.src))||'';};
+  const capOf=it=>{const c=it.querySelector('.gal__cap');return {t:(c&&c.querySelector('.t')?c.querySelector('.t').textContent:''),s:(c&&c.querySelector('.s')?c.querySelector('.s').textContent:'')};};
+
+  function show(i){
+    idx=(i+items.length)%items.length;
+    const c=capOf(items[idx]);
+    fig.classList.remove('show');
+    const swap=()=>{lbImg.src=urlOf(items[idx]);lbImg.alt=c.t||'Imagem da galeria';capT.textContent=c.t;capS.textContent=c.s;cur.textContent=idx+1;requestAnimationFrame(()=>fig.classList.add('show'));};
+    if(lbImg.src) setTimeout(swap,160); else swap();
+  }
+  function openLb(i){open=true;lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.classList.add('menu-lock');show(i);}
+  function closeLb(){open=false;lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.classList.remove('menu-lock');fig.classList.remove('show');}
+
+  items.forEach((it,i)=>{
+    it.setAttribute('role','button');
+    it.setAttribute('tabindex','0');
+    it.addEventListener('click',()=>openLb(i));
+    it.addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i);}
+    });
+  });
+  lb.querySelector('.lb__next').addEventListener('click',()=>show(idx+1));
+  lb.querySelector('.lb__prev').addEventListener('click',()=>show(idx-1));
+  lb.querySelector('.lb__close').addEventListener('click',closeLb);
+  lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+  document.addEventListener('keydown',e=>{if(!open)return;if(e.key==='Escape')closeLb();else if(e.key==='ArrowRight')show(idx+1);else if(e.key==='ArrowLeft')show(idx-1);});
+  // swipe em mobile
+  let sx=0;
+  lb.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(idx+(dx<0?1:-1));},{passive:true});
+})();
+
+applyLang(LANG);
+</script>
+</body>
+</html>
