@@ -10,12 +10,19 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { nome = '', email = '', mensagem = '', empresa = '', lang = 'pt' } = req.body || {};
+  // Normalizar para string: defaults de desestruturação só cobrem undefined
+  // (null ou números fariam .trim()/.length rebentar com 500 em vez de 400).
+  const b = req.body || {};
+  const nome = String(b.nome ?? '').trim();
+  const email = String(b.email ?? '').trim();
+  const mensagem = String(b.mensagem ?? '').trim();
+  const empresa = String(b.empresa ?? '');
+  const lang = String(b.lang ?? 'pt');
 
   // Honeypot: campo invisível no formulário — se vier preenchido, é um bot.
   if (empresa) return res.status(200).json({ ok: true });
 
-  if (!nome.trim() || !mensagem.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!nome || !mensagem || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ error: 'Invalid fields' });
   }
   if (nome.length > 200 || email.length > 200 || mensagem.length > 5000) {
