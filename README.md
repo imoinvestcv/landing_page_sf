@@ -66,23 +66,21 @@ server {
 ## Formulário de contacto (Resend)
 
 O formulário faz POST para `/api/send`, que envia o email via
-[Resend](https://resend.com) para `imoinvestcaboverde@gmail.com`, com
+[Resend](https://resend.com) para `info@imoinvest.cv`, com
 `reply_to` preenchido com o email do visitante — responder é só carregar em
 "Responder". Inclui honeypot anti-spam e validação no servidor.
 
 - **A chave da API vive só na variável de ambiente** `RESEND_API_KEY` (Vercel) —
   nunca no código nem no repositório. O `.env` local serve apenas para testar
   com `vercel dev` e está no `.gitignore`.
-- **Remetente:** enquanto usar `onboarding@resend.dev`, o Resend só entrega ao
-  email da própria conta. Para enviar de um endereço da marca (ex.:
-  `site@imo-invest.cv`) e para qualquer destinatário, verificar o domínio em
-  [resend.com/domains](https://resend.com/domains) e trocar o `from` em
-  `api/send.js`.
+- **Remetente:** o `from` é `IMO INVEST <info@imoinvest.cv>` — exige o domínio
+  `imoinvest.cv` verificado em [resend.com/domains](https://resend.com/domains).
+  Sem essa verificação o Resend rejeita o envio e o formulário devolve erro.
 - **Testar localmente:** `npm i -g vercel` → `vercel dev` na pasta do projeto.
 - Se a chave alguma vez for exposta, revogá-la e criar outra em
   [resend.com/api-keys](https://resend.com/api-keys).
 
 ## Contactos no site
 
-- Email: contacto@imo-invest.cv
-- Telefone / WhatsApp: +238 921 78 38 (FAB liga a `wa.link/uml5bo`)
+- Email: info@imoinvest.cv
+- Telefone / WhatsApp: +238 921 78 38 (FAB liga a `wa.link/201zsc`)
