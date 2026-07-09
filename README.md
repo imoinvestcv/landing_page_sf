@@ -75,7 +75,7 @@ O formulário faz POST para `/api/send`, que envia o email via
   com `vercel dev` e está no `.gitignore`.
 - **Remetente:** enquanto usar `onboarding@resend.dev`, o Resend só entrega ao
   email da própria conta. Para enviar de um endereço da marca (ex.:
-  `site@imo-invest.cv`) e para qualquer destinatário, verificar o domínio em
+  `info@imoinvest.cv`) e para qualquer destinatário, verificar o domínio em
   [resend.com/domains](https://resend.com/domains) e trocar o `from` em
   `api/send.js`.
 - **Testar localmente:** `npm i -g vercel` → `vercel dev` na pasta do projeto.
@@ -84,5 +84,5 @@ O formulário faz POST para `/api/send`, que envia o email via
 
 ## Contactos no site
 
-- Email: contacto@imo-invest.cv
+- Email: info@imoinvest.cv
 - Telefone / WhatsApp: +238 921 78 38 (FAB liga a `wa.link/uml5bo`)

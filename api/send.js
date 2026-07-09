@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     },
     body: JSON.stringify({
       // Após verificar o domínio em resend.com/domains, trocar para:
-      // from: 'IMO INVEST <site@imo-invest.cv>',
+      // from: 'IMO INVEST <info@imoinvest.cv>',
       from: 'IMO INVEST <onboarding@resend.dev>',
       to: 'imoinvestcaboverde@gmail.com',
       reply_to: email,
