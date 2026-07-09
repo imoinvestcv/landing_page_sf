@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Após ligar o domínio final, descomentar e ajustar:
+# Sitemap: https://www.imo-invest.cv/sitemap.xml
